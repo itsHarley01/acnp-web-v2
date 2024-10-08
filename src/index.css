@@ -1,0 +1,11 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-red {
+  background-color: #ff4d4d !important;
+  color: white;
+}
