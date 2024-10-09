@@ -167,7 +167,7 @@ const Products = () => {
           </button>
           <button
             className={`px-6 py-2 rounded-md ${
-              currentType === "others"
+              currentType === "completeunit"
                 ? "bg-blue-600 text-white"
                 : "border border-blue-600"
             }`}

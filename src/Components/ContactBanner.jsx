@@ -41,7 +41,7 @@ const ContactBanner = () => {
   }
 
   return (
-    <div className="bg-[#0592DBFF] w-full my-20 flex">
+    <div className="bg-[#0592DBFF] w-full my-48 flex">
       <div className="px-5 flex py-8 mx-auto">
         <p className="text-7xl text-white font-bold">Get in Touch with Us</p>
         <div className="ml-16 flex-col flex gap-2">

@@ -90,20 +90,20 @@ const Footer = () => {
         </div>
         {/* Contact Info Section */}
         <div className="text-left mb-4 md:mb-0">
-          <p className="font-semibold text-2xl">Contact info</p>
-          <div className="flex items-center mb-1 text-xl">
+          <p className="font-semibold text-2xl mb-5">Contact info</p>
+          <div className="flex items-center mb-1 text-md">
             <FaPhone className="mr-2" />
             <span>{error ? "N/A" : contactInfo.phoneNumber}</span>
           </div>
-          <div className="flex items-center mb-1 text-xl">
+          <div className="flex items-center mb-1 text-md">
             <FaEnvelope className="mr-2" />
             <span>{error ? "N/A" : contactInfo.email}</span>
           </div>
-          <div className="flex items-center mb-1 text-xl">
+          <div className="flex items-center mb-1 text-md">
             <FaFacebook className="mr-2" />
             <span>{error ? "N/A" : contactInfo.fbLink}</span>
           </div>
-          <div className="flex items-center mb-1 text-xl">
+          <div className="flex items-center mb-1 text-md">
             <FaMapMarkerAlt className="mr-2" />
             <span>Location: Bien Unido, Bohol</span>
           </div>
