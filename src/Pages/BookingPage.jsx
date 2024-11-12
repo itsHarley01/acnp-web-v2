@@ -434,7 +434,7 @@ function BookingPage() {
     }
   };
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div id="booking" className="flex items-center justify-center min-h-screen">
       <div className="flex bg-white w-[800px] p-6 shadow-lg rounded-lg">
         {/* Stepper Section */}
         <div className="relative w-1/3 mr-4">

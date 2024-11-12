@@ -1,8 +1,14 @@
 import React from "react";
 import img from "../assets/bintana.png";
-import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Book = () => {
+  const scrollWithOffset = (el) => {
+    const yOffset = -150; // Adjust offset if needed
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
   return (
     <div className="h-[600px] flex">
       <div className="bg-[#0592DBFF] h-72 w-full flex flex-row justify-end my-auto relative">
@@ -18,12 +24,14 @@ const Book = () => {
             Elevate your space with "Aparece Cuts n Pieces" glass services –
             we’re ready when you are!
           </p>
-          <NavLink
-            to="/book-appointment"
+          <HashLink
+            smooth
+            to="/book-appointment/#booking"
+            scroll={(el) => scrollWithOffset(el)} // Custom scrolling behavior
             className="bg-white w-1/2 text-[#0592DBFF] rounded-lg border mt-4 px-4 py-2 text-center"
           >
-            Book now
-          </NavLink>
+            Book Now
+          </HashLink>
         </div>
       </div>
     </div>

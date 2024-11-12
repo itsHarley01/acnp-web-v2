@@ -45,9 +45,11 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="mr-10">
+        <div className="mr-8">
           <HashLink
-            to="/book-appointment"
+            smooth
+            to="/book-appointment/#booking"
+            scroll={(el) => scrollWithOffset(el)}
             className="bg-blue-500 text-white px-6 py-4 rounded hover:bg-blue-600"
           >
             Book Now

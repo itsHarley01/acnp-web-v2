@@ -119,7 +119,7 @@ const Footer = () => {
               value={formData.name}
               onChange={handleInputChange}
               placeholder="Your Name"
-              className="p-2 text-gray-800"
+              className="p-2 text-gray-800 rounded-lg"
             />
             <input
               type="email"
@@ -127,21 +127,21 @@ const Footer = () => {
               value={formData.email}
               onChange={handleInputChange}
               placeholder="Your Email"
-              className="p-2 text-gray-800"
+              className="p-2 text-gray-800 rounded-lg"
             />
             <textarea
               name="note"
               value={formData.note}
               onChange={handleInputChange}
               placeholder="Your Message"
-              className="p-2 text-gray-800"
+              className="p-2 text-gray-800 rounded-lg"
               rows="4"
             />
             {formError && <p className="text-red-500">{formError}</p>}
             {formSuccess && <p className="text-green-500">{formSuccess}</p>}
             <button
               type="submit"
-              className="bg-white text-[#0592DBFF] py-2 px-4"
+              className="bg-white rounded-lg w-1/2 mx-auto text-[#0592DBFF] py-2 px-4"
             >
               Submit
             </button>

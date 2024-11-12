@@ -43,14 +43,14 @@ const Projects = () => {
           : sortedProjects.map((project, index) => (
               <div
                 key={index}
-                className={`relative overflow-hidden transition-all duration-300 ease-in-out ${
+                className={`relative overflow-hidden transition-all shadow-xl duration-300 ease-in-out ${
                   project.featured ? "md:col-span-2 md:row-span-2" : ""
                 }`}
               >
                 <img
                   src={project.uri}
                   alt="img"
-                  className={`w-full border h-full object-contain transition-all duration-300 ease-in-out ${
+                  className={`w-full rounded bg-gray-300 h-full shadow-xl object-contain transition-all duration-300 ease-in-out ${
                     project.featured ? "md:scale-110" : ""
                   }`}
                 />

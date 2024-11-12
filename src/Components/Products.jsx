@@ -37,18 +37,18 @@ const ProductCard = ({ image, name, loading, isActive }) => {
       }`}
     >
       {loading ? (
-        <div className="w-full h-96 bg-gray-300 animate-pulse rounded-md"></div>
+        <div className="w-full h-96 bg-gray-400 animate-pulse rounded-md"></div>
       ) : (
         <img
           src={image}
           alt={name}
-          className="w-full h-96 object-cover rounded-md"
+          className="w-full h-96 object-cover rounded-md shadow-xl"
         />
       )}
       <h2
         className={`text-xl font-semibold mt-3 ${
           loading
-            ? "bg-gray-300 h-6 animate-pulse w-3/4 mx-auto rounded-md"
+            ? "bg-gray-400 h-6 animate-pulse w-3/4 mx-auto rounded-md"
             : ""
         }`}
       >

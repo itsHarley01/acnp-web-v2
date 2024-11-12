@@ -33,8 +33,20 @@ const NextArrow = (props) => {
 const ServiceCard = ({ image, title, description, price, loading }) => {
   const navigate = useNavigate(); // Use navigate
 
+  const scrollWithOffset = (el) => {
+    const yOffset = -150; // Adjust as needed
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
   const handleGoClick = () => {
-    navigate(`/book-appointment?service=${title}`); // Pass the service name in the URL query parameter
+    navigate(`/book-appointment?service=${title}`);
+    setTimeout(() => {
+      const bookingElement = document.querySelector("#booking");
+      if (bookingElement) {
+        scrollWithOffset(bookingElement);
+      }
+    }, 100);
   };
 
   return (
@@ -45,7 +57,7 @@ const ServiceCard = ({ image, title, description, price, loading }) => {
         <img
           src={image}
           alt={title}
-          className="w-full h-48 object-cover rounded-md"
+          className="w-full h-58 object-cover rounded-md"
         />
       )}
       <h2
@@ -63,7 +75,7 @@ const ServiceCard = ({ image, title, description, price, loading }) => {
         {loading ? "" : description}
       </p>
       <p
-        className={`text-xl font-bold text-green-500 mt-2 ${
+        className={`text-xl font-bold text-gray-700 mt-2 ${
           loading ? "bg-gray-300 h-6 animate-pulse w-1/4 rounded-md" : ""
         }`}
       >
